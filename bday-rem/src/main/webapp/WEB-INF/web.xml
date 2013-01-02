@@ -3,5 +3,24 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+   <display-name>Birth Day Reminder</display-name>
+  
+  <servlet>
+  	<servlet-name>bday</servlet-name>
+  	<servlet-class>com.bday.servlet.BDayServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>data</servlet-name>
+  	<servlet-class>com.bday.servlet.LoadEmployeeData</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>bday</servlet-name>
+  	<url-pattern>/bday</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>data</servlet-name>
+  	<url-pattern>/getEmployee.do</url-pattern>
+  </servlet-mapping>
 </web-app>
